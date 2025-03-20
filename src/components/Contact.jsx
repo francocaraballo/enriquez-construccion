@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { MdOutlineDisabledByDefault as DefaultIcon } from "react-icons/md";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -64,7 +64,7 @@ export default function Contact() {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="bg-blue-600 p-3 rounded-full mr-4">
-                    <Phone className="h-5 w-5 text-white" />
+                    <DefaultIcon className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Phone</h4>
@@ -74,7 +74,7 @@ export default function Contact() {
 
                 <div className="flex items-start">
                   <div className="bg-blue-600 p-3 rounded-full mr-4">
-                    <Mail className="h-5 w-5 text-white" />
+                    <DefaultIcon className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Email</h4>
@@ -84,7 +84,7 @@ export default function Contact() {
 
                 <div className="flex items-start">
                   <div className="bg-blue-600 p-3 rounded-full mr-4">
-                    <MapPin className="h-5 w-5 text-white" />
+                    <DefaultIcon className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Address</h4>
@@ -94,7 +94,7 @@ export default function Contact() {
 
                 <div className="flex items-start">
                   <div className="bg-blue-600 p-3 rounded-full mr-4">
-                    <Clock className="h-5 w-5 text-white" />
+                    <DefaultIcon className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Hours</h4>

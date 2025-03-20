@@ -17,24 +17,23 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div className="md:w-2/3">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Building Your Vision, <span className="text-orange-500">Crafting Your Future</span>
+            Tu proyecto hecho realidad, <span className="text-orange-500 text-3xl">Lo pedís, lo tenés. Así de simple.</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
-            With over 25 years of experience, BuildRight Construction delivers exceptional quality and reliability for
-            commercial and residential projects of all sizes.
+          Más de 10 años de trayectoria nos respaldan en el mundo de la construcción. Nos comprometemos con cada cliente para hacer realidad su proyecto, asegurando tiempos de entrega óptimos y un trabajo impecable. Construimos con dedicación, compromiso y    calidad.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#contact"
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-md font-medium text-lg inline-block text-center transition duration-300"
             >
-              Get Started
+              Solicitar presupuesto
             </a>
             <a
               href="#projects"
               className="bg-transparent hover:bg-white/10 text-white border border-white px-8 py-3 rounded-md font-medium text-lg inline-block text-center transition duration-300"
             >
-              View Our Work
+              Nuestros trabajos
             </a>
           </div>
 
@@ -51,7 +50,7 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="ml-3 text-gray-200">Licensed & Insured</span>
+              <span className="ml-3 text-gray-200">Calidad</span>
             </div>
             <div className="flex items-center">
               <div className="bg-blue-600 p-3 rounded-full">
@@ -65,7 +64,7 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="ml-3 text-gray-200">Free Estimates</span>
+              <span className="ml-3 text-gray-200">Experiencia</span>
             </div>
             <div className="flex items-center">
               <div className="bg-blue-600 p-3 rounded-full">
@@ -79,7 +78,7 @@ export default function Hero() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="ml-3 text-gray-200">Award Winning</span>
+              <span className="ml-3 text-gray-200">Garantia</span>
             </div>
           </div>
         </div>

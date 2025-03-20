@@ -30,22 +30,22 @@ export default function Navbar() {
         {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="/" className="text-gray-700 hover:text-orange-500 px-3 py-2 font-medium">
-            Home
+            Inicio
           </a>
           <a href="#projects" className="text-gray-700 hover:text-orange-500 px-3 py-2 font-medium">
-            Projects
+            Proyectos
           </a>
           <a href="#services" className="text-gray-700 hover:text-orange-500 px-3 py-2 font-medium">
-            Services
+            Servicios
           </a>
           <a href="#contact" className="text-gray-700 hover:text-orange-500 px-3 py-2 font-medium">
-            Contact
+            Contacto
           </a>
           <a
             href="#contact"
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition duration-300"
           >
-            Get a Quote
+            Presupuesto
           </a>
         </div>
 
@@ -74,35 +74,35 @@ export default function Navbar() {
             className="block px-3 py-2 text-gray-700 hover:text-orange-500 font-medium"
             onClick={toggleMenu}
           >
-            Home
+            Inicio
           </a>
           <a
             href="#projects"
             className="block px-3 py-2 text-gray-700 hover:text-orange-500 font-medium"
             onClick={toggleMenu}
           >
-            Projects
+            Proyectos
           </a>
           <a
             href="#services"
             className="block px-3 py-2 text-gray-700 hover:text-orange-500 font-medium"
             onClick={toggleMenu}
           >
-            Services
+            Servicios
           </a>
           <a
             href="#contact"
             className="block px-3 py-2 text-gray-700 hover:text-orange-500 font-medium"
             onClick={toggleMenu}
           >
-            Contact
+            Contacto
           </a>
           <a
             href="#contact"
             className="block mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition duration-300"
             onClick={toggleMenu}
           >
-            Get a Quote
+            Presupuesto
           </a>
         </div>
       </div>
