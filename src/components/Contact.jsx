@@ -1,7 +1,11 @@
 "use client"
-
-import { useState } from "react"
-import { MdOutlineDisabledByDefault as DefaultIcon } from "react-icons/md";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+import {
+  VITE_EMAILJS_SERVICE_ID as serviceId,
+  VITE_EMAILJS_TEMPLATE_ID as templateId,
+  VITE_EMAILJS_USER_ID as userId,
+} from '../utils/config.js'
 import { FaPhoneAlt as PhoneIcon } from "react-icons/fa";
 import { IoIosMail as MailIcon } from "react-icons/io";
 import { FaLocationDot as AdressIcon } from "react-icons/fa6";
@@ -24,6 +28,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
+  const form = useRef();
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({
@@ -36,22 +41,25 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitSuccess(true)
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
+    emailjs
+      .sendForm(serviceId, templateId, form.current, userId)
+      .then(result => {
+        console.log(result.text)
+        setSubmitSuccess(true);
+        setIsSubmitting(false);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        })
       })
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false)
-      }, 5000)
-    }, 1500)
+      .catch(error => {
+        console.log(error);
+        alert("Ocurrio un error al enviar el mensaje, por favor intenta nuevamente");
+        setIsSubmitting(false);
+      })
+    
   }
 
   return (
@@ -61,7 +69,7 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contactanos</h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Have a project in mind? Get in touch with our team to discuss how we can bring your vision to life.
+            Dejanos tus datos, y contanos un poco acerca de lo que tenes en mente. Estaremos en contacto a la brevedad.
           </p>
         </div>
 
@@ -133,7 +141,7 @@ export default function Contact() {
                 </div>
               ) : null}
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} ref={ form }>
                 <div className="mb-6">
                   <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
                     Nombre completo

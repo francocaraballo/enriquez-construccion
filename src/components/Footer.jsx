@@ -43,7 +43,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Servicios */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Nuestros Servicios</h3>
             <ul className="space-y-2">
